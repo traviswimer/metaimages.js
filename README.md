@@ -1,4 +1,4 @@
-# metaimages.js
+# metaimages.js [![Build Status](https://travis-ci.org/traviswimer/metaimages.js.svg?branch=master)](https://travis-ci.org/traviswimer/metaimages.js) [![Coverage Status](https://coveralls.io/repos/traviswimer/metaimages.js/badge.png)](https://coveralls.io/r/traviswimer/metaimages.js)
 
 > Create correctly sized images for use in social media meta tags.
 
