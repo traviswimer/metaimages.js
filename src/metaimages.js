@@ -62,13 +62,19 @@ module.exports = function( options ) {
 			if( imagesProcessed >= imagesToProcess ){
 				callback(null, successfulConversions);
 			}
-		}
+		};
 
 
 		// make sure specified image exists
 		if( !fs.existsSync(src) ){
 			callback( new Error('Image file "' + src + '" not found.') );
 		}else{
+
+
+			var resizeCropCallback = function( err, filePath ){
+				successfulConversions.push(filePath);
+				conversionFinished();
+			};
 
 			// Cycle through each social media type
 			for( var type in config.images ){
@@ -91,12 +97,10 @@ module.exports = function( options ) {
 						width: img.width,
 						gravity: gravity
 					}, 
-					function( err, filePath ){
-						successfulConversions.push(filePath);
-						conversionFinished();
-					}
+					resizeCropCallback
 				);
 			}
+
 
 
 		}
@@ -105,7 +109,7 @@ module.exports = function( options ) {
 
 	return {
 		create: create
-	}
+	};
 
 
 };
