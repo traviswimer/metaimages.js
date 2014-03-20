@@ -56,29 +56,14 @@ describe('metaimages', function(){
 			});
 		});
 
-		/*describe('callback', function(){
+		it('should create correct image sizes for wide images', function(done){
 
-			it('should return new file path on success', function(done){
+			mi.create("tests/images/1500x3000.png", "tests/tmp/", function(err, files){
+				checkImageSizes('1500x3000.jpg');
 
-				mi.create("tests/images/1500x3000.png", "tests/tmp/", function(err, filePath){
-					expect(typeof filePath).to.equal( "object" );
-
-					done();
-				});
+				done();
 			});
-
-			it('should return error for non-existent file', function(done){
-
-				mi.create("tests/images/fakeName.png", "tests/tmp/", function(err, filePath){
-					expect(err).to.deep.equal( new Error('Image file "tests/images/fakeName.png" not found.') );
-
-					done();
-				});
-			});
-
-
-		});*/
-
+		});
 
 	});
 
