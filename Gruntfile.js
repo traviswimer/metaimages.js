@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 		// For istanbul
 		env: {
 			coverage: {
-				APP_DIR_FOR_CODE_COVERAGE: './tests/coverage/instrument/src/'
+				APP_DIR_FOR_CODE_COVERAGE: '../tests/coverage/instrument/src/'
 			}
 		},
 
