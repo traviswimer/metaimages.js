@@ -36,6 +36,22 @@ describe('metaimages', function(){
 
 		});
 
+		it('callback array of filepaths', function(done){
+
+			mi.create("tests/images/test1.png", "tests/tmp/", function(err, files){
+				expect(files).to.deep.equal( [
+					"tests/tmp/twitter_test1.jpg",
+					"tests/tmp/facebook_small_test1.jpg",
+					"tests/tmp/gplus_test1.jpg",
+					"tests/tmp/facebook_large_test1.jpg"
+				] );
+
+				done();
+			});
+
+		});
+
+
 
 		it('should create correct image sizes for square images', function(done){
 

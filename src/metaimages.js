@@ -92,7 +92,7 @@ module.exports = function( options ) {
 					{
 						format: format,
 						src: src,
-						dest: dest + '/' + img.prefix + filename + '.' + format,
+						dest: dest + img.prefix + filename + '.' + format,
 						height: img.height,
 						width: img.width,
 						gravity: gravity
