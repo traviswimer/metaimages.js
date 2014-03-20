@@ -81,6 +81,12 @@ module.exports = function( options ) {
 
 				var img = config.images[type];
 
+				// Skip images that are meant to be left out
+				if( typeof config.images[type] !== 'object' ){
+					conversionFinished();
+					continue;
+				}
+
 				var filename = src.replace(/^.*[\\\/]/, '');
 				filename = (filename.split("."))[0];
 

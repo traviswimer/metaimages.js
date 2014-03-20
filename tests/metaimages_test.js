@@ -51,6 +51,24 @@ describe('metaimages', function(){
 
 		});
 
+		it('callback empty array of filepaths if all set to false', function(done){
+			var falseMi = metaimages({
+				images: {
+					twitter: false,
+					facebook_small: false,
+					facebook_large: false,
+					gplus: false
+				}
+			});
+
+			falseMi.create("tests/images/test1.png", "tests/tmp/", function(err, files){
+				expect(files).to.deep.equal( [] );
+
+				done();
+			});
+
+		});
+
 
 
 		it('should create correct image sizes for square images', function(done){
