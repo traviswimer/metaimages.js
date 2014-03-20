@@ -45,6 +45,7 @@ describe('metaimages', function(){
 
 				done();
 			});
+
 		});
 
 		it('should create correct image sizes for tall images', function(done){
@@ -54,15 +55,17 @@ describe('metaimages', function(){
 
 				done();
 			});
+
 		});
 
 		it('should create correct image sizes for wide images', function(done){
 
-			mi.create("tests/images/1500x3000.png", "tests/tmp/", function(err, files){
-				checkImageSizes('1500x3000.jpg');
+			mi.create("tests/images/3000x1500.png", "tests/tmp/", function(err, files){
+				checkImageSizes('3000x1500.jpg');
 
 				done();
 			});
+			
 		});
 
 	});
