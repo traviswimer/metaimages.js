@@ -2,6 +2,8 @@
 
 > Create correctly sized images for use in social media meta tags.
 
+To add social media meta tags, such as Facebook's Open Graph meta tags, you have to create multiple images of varying sizes. This module can do some of the work for you by taking a single large image and rendering all the necessary images.
+
 ## Installation
 
 ```shell
