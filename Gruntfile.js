@@ -70,7 +70,7 @@ module.exports = function(grunt) {
 				force: true
 			},
 			all: {
-				src: 'reports/lcov.info'
+				src: 'tests/coverage/reports/lcov.info'
 			}
 		},
 
