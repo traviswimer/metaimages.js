@@ -117,22 +117,20 @@ metaImg.create(
 
 
 
-## create( sourceImage, outputDirectory, callback( error, filesArray ) )
+### create( sourceImage, outputDirectory, callback( error, filesArray ) )
 
 
-### sourceImage
+#### sourceImage - *REQUIRED PARAMETER*
 
-**REQUIRED PARAMETER**
 * Type: `String`
 * Description: Sets the source image to be used to render the social media images.
 
-### outputDirectory
+#### outputDirectory - *REQUIRED PARAMETER*
 
-**REQUIRED PARAMETER**
 * Type: `String`
 * Description: Sets the directory to where the rendered social media images will be saved.
 
-### callback( error, filesArray )
+#### callback( error, filesArray )
 
 * Type: `function`
 * Description: function that is called once image creation is complete.
