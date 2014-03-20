@@ -6,7 +6,7 @@ var expect = chai.expect;
 // Module for finding the dimensions of an image
 var sizeOf = require('image-size');
 
-var requireHelper = require('../require_helper');
+var requireHelper = require('./require_helper');
 
 // The metaimages module
 var metaimages = requireHelper('metaimages');
@@ -25,7 +25,6 @@ describe('metaimages', function(){
 	describe('create() method', function(){
 		var mi = metaimages();
 
-		
 
 		it('should callback error for invalid source image', function(done){
 
@@ -65,7 +64,7 @@ describe('metaimages', function(){
 
 				done();
 			});
-			
+
 		});
 
 	});
