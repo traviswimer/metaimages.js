@@ -98,12 +98,10 @@ module.exports = function(grunt) {
 
 
 	// Removes images created from past tests and runs tests
-	grunt.registerTask('test', ['clean:tests', 'env:coverage', 'not_constantinople']);
-
-	grunt.registerTask('watchtest', ['watch']);
+	grunt.registerTask('test', ['jshint', 'clean:tests', 'env:coverage', 'not_constantinople']);
 
 	// Lint and run tests.
-	grunt.registerTask('default', ['jshint', 'test']);
+	grunt.registerTask('default', ['watch']);
 
 
 };
