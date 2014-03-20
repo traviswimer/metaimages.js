@@ -33,8 +33,8 @@ module.exports = function( options ) {
 			},
 			facebook_large: {
 				"prefix": "facebook_large_",
-				'height': 1200,
-				'width': 630,
+				'height': 630,
+				'width': 1200,
 				'maxBytes': 5242880 // 5MB
 			},
 			gplus: {
@@ -55,6 +55,8 @@ module.exports = function( options ) {
 		var imagesToProcess = Object.keys( config.images ).length;
 		var imagesProcessed = 0;
 
+		var successfulConversions = [];
+
 		var conversionFinished = function(){
 			imagesProcessed++;
 			if( imagesProcessed >= imagesToProcess ){
@@ -73,7 +75,7 @@ module.exports = function( options ) {
 
 				var img = config.images[type];
 
-				var filename = filepath.replace(/^.*[\\\/]/, '');
+				var filename = src.replace(/^.*[\\\/]/, '');
 				filename = (filename.split("."))[0];
 
 				var format = img.format || config.format;
@@ -84,7 +86,7 @@ module.exports = function( options ) {
 					{
 						format: format,
 						src: src,
-						dest: dest + '/' + filename + '.' + format,
+						dest: dest + '/' + img.prefix + filename + '.' + format,
 						height: img.height,
 						width: img.width,
 						gravity: gravity
