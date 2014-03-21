@@ -1,7 +1,7 @@
 {
   "name": "metaimages",
   "description": "Create correctly sized images for use in social media meta tags.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/traviswimer/metaimages.js",
   "author": {
     "name": "Travis Wimer",
@@ -24,6 +24,7 @@
   "engines": {
     "node": ">= 0.8.0"
   },
+  "main": "src/metaimages",
   "scripts": {
     "test": "grunt test",
     "ci": "grunt test --stack"
